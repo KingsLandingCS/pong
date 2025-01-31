@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Pong",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "pong.c",
+        "-o",
+        "pong",
+        "-lSDL2"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

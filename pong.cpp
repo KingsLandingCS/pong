@@ -11,7 +11,7 @@ int main()
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
     {
-        cerr << "SDL_Init Error: " << SDL_GetError() << endl;
+        cout << "SDL_Init Error: " << SDL_GetError() << endl;
         return 1;
     }
 
@@ -19,7 +19,7 @@ int main()
     SDL_Window *window = SDL_CreateWindow("Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
     if (!window)
     {
-        cerr << "SDL_CreateWindow Error: " << SDL_GetError() << endl;
+        cout << "SDL_CreateWindow Error: " << SDL_GetError() << endl;
         SDL_Quit();
         return 1;
     }
@@ -28,7 +28,7 @@ int main()
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (!renderer)
     {
-        cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << endl;
+        cout << "SDL_CreateRenderer Error: " << SDL_GetError() << endl;
         SDL_DestroyWindow(window);
         SDL_Quit();
         return 1;
